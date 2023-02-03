@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;600;&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/paper/bootstrap.min.css", rel="stylesheet">
+    <title>{{ pet_name }}</title>
+
+   <style>
+        body{
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+
+        .-mb-1{
+            margin-bottom: -1em;
+        }
+
+       
+
+        .title{
+            font-size: 3em;
+        }
+        .blue{
+            color: #17202F;
+
+        }
+       
+        .bold{
+            font-weight: bold;
+        }
+             
+        .small-font{
+            font-size: .8em;
+        }
+
+        .text-center{
+            text-align: center;
+        }
+        .capitalize{
+            text-transform: capitalize;
+        }
+        p{
+            color:#17202F;
+        }
+    </style>
+    <style type="text/css" media="print">
+        @page { 
+            size: landscape;
+        }
+        body { 
+            writing-mode: tb-rl;
+        }
+    </style>
+    
+</head>
+<body style="width: 100%;">
+<img style="position:absolute;width: 1400px;height:598px;"  src="{{ bg_img }}">
+<div style="position: relative;margin-top: -2em;color: white;">
+    <h3 style="font-weight: bold;text-align: center;padding-top: 1em;color: white !important;">Mascota Perdida</h3>
+    
+    <div class="row">
+        <div class="col-xs-6" style="margin: 1em;">
+            <img 
+            src="{{ pet_profile }}" 
+            alt="image"
+            style="
+            width: 100%;
+            height: 22em;
+            display: block;
+            margin-left: 1em;
+            border-radius: 1em;
+            "/>
+        </div>
+        <div class="col-xs-5">
+            <div  style="height: 22em;padding:1em;background:white !important;border-radius: 1em;margin-top:1em">
+                <h4 class="text-center m-1 capitalize">{{ pet_name }}</h4>
+                <% if(rewards > 0){ }}
+                    <h5 class="text-center" style="color: #00a650 !important;font-weight: bold;z-index: 10;">$ {{ rewards }} de recompensa</h5>
+                <% } else{ }}
+                <% } }}
+                <div class="p-1">
+                        <p>
+                            {{ note }}
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-3" style="margin: 1em;">
+            <img style="border-radius: 1em;height: 12em;margin-left: 1.5em;" src="{{ qr_code }}" >
+            
+        </div>
+        <div class="col-xs-8" style="height: 12em;padding:1em 3em;background:white !important;border-radius: 1em;margin-top: 1em;">
+            <p class="font-size:.8em;">{{ description }}</p>
+            <p style="font-weight: bold;">Se perdio el dia <span style="color:red !important;">{{ moment(date).format('DD/MMMM/YYYY')  }} </span>
+            <span>llamar a {{ user_cellphone }} con {{ user_name }}</span>
+        </p>
+        </div>
+    </div>
+    <!-- -->
+
+        <!-- 
+        
+     -->
+    
+    
+    
+    </div>
+    </body>
